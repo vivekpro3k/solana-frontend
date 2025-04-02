@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern Solana blockchain application for managing tokens and transactions">
+    <meta name="keywords" content="Solana, blockchain, wallet, tokens, crypto, web3">
+    <meta property="og:title" content="Solana Web Application">
+    <meta property="og:description" content="A modern Solana blockchain application for managing tokens and transactions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Solana Web Application">
+    <meta name="twitter:description" content="A modern Solana blockchain application for managing tokens and transactions">
+    <title>Solana Web Application</title>
+    
+    <!-- Core Dependencies -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Solana Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@latest/lib/index.iife.min.js"></script>
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
+    <!-- Application Styles -->
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/components.css" rel="stylesheet">
+    <link href="styles/dark-mode.css" rel="stylesheet">
+
+    <script>
+        // Initialize dark mode
+        if (localStorage.getItem('color-theme') === 'dark' || 
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Theme utilities
+        function getInitialTheme() {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                const storedPrefs = window.localStorage.getItem('color-theme');
+                if (typeof storedPrefs === 'string') {
+                    return storedPrefs;
+                }
+
+                const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
+                if (userMedia.matches) {
+                    return 'dark';
+                }
+            }
+            return 'light';
+        }
+
+        function setTheme(theme) {
+            const root = window.document.documentElement;
+            const isDark = theme === 'dark';
+
+            root.classList.remove(isDark ? 'light' : 'dark');
+            root.classList.add(theme);
+
+            localStorage.setItem('color-theme', theme);
+        }
+
+        function reportError(error) {
+            console.error('Application error:', error);
+        }
+    </script>
+    <link href="styles/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- Application Scripts -->
+    <script type="text/babel" src="utils/walletUtils.js"></script>
+    <script type="text/babel" src="utils/solanaUtils.js"></script>
+    <script type="text/babel" src="components/DarkModeToggle.js"></script>
+    <script type="text/babel" src="components/InfoSection.js"></script>
+    <script type="text/babel" src="components/Notification.js"></script>
+    <script type="text/babel" src="components/WalletSelect.js"></script>
+    <script type="text/babel" src="components/TokenCreator.js"></script>
+    <script type="text/babel" src="components/TokenMinter.js"></script>
+    <script type="text/babel" src="components/TokenTransfer.js"></script>
+    <script type="text/babel" src="components/TransactionHistory.js"></script>
+    <script type="text/babel" src="components/Dashboard.js"></script>
+    <script type="text/babel" src="app.js"></script>
+    <script type="text/babel" src="components/WalletConnect.js"></script>
+    <script type="text/babel" src="components/TokenBalance.js"></script>
+    <script type="text/babel" src="components/TransactionList.js"></script>
+    <script type="text/babel" src="utils/themeUtils.js"></script>
+</body>
+</html>

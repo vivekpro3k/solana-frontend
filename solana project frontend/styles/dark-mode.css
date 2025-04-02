@@ -1,0 +1,133 @@
+/* Enable Dark Mode */
+:root {
+    color-scheme: light dark;
+}
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark {
+    color-scheme: dark;
+    background-color: #121826; /* Deep Navy Blue */
+    color: #f9fafb;
+}
+
+/* Global Background Fixes */
+.dark body,
+.dark .bg-gray-50,
+.dark .bg-white {
+    background-color: #121826 !important; /* Non-white background */
+}
+
+.dark .bg-gray-800 {
+    background-color: #181a1b !important; /* Darker contrast */
+}
+
+.dark .bg-gray-900 {
+    background-color: #111827 !important;
+}
+
+/* Ensure All Text is Visible */
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900 {
+    color: #ffffff !important;
+}
+
+/* Wallet Button Fix */
+.dark .wallet-button {
+    background-color: #1e293b !important; /* Dark Blue */
+    border-color: #4b5563 !important;
+    color: #ffffff !important;
+}
+
+/* Wallet ID Visibility */
+.dark .wallet-id {
+    color: #ffffff !important;
+    font-weight: bold;
+    display: block !important;
+}
+
+/* Fix Missing ID Section */
+.dark .wallet-container {
+    display: flex !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+}
+
+/* Border Colors */
+.dark .border,
+.dark .border-gray-200 {
+    border-color: #334155 !important;
+}
+
+/* Form Elements */
+.dark input,
+.dark select,
+.dark textarea {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #ffffff !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+    border-color: #60a5fa !important;
+    outline: none !important;
+}
+
+/* Buttons */
+.dark button {
+    color: #ffffff !important;
+}
+
+.dark button.bg-gray-200 {
+    background-color: #374151 !important;
+}
+
+/* Hover Effects */
+.dark .hover\:bg-gray-50:hover {
+    background-color: #374151 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+    background-color: #1f2937 !important;
+}
+
+/* Shadow Modifications */
+.dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Cards and Containers */
+.dark .bg-blue-50 {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Token Name & Symbol Visibility */
+.dark .token-name,
+.dark .token-symbol {
+    color: #ffffff !important;
+}
+
+/* Fix for Transaction Items */
+.dark .transaction-item:hover {
+    background-color: #374151 !important;
+}
+
+/* Fix Notifications */
+.dark .notification {
+    background-color: #1e293b !important;
+}
+
+/* Fix Any Hidden Text */
+.dark p, 
+.dark span, 
+.dark div {
+    color: #ffffff !important;
+}

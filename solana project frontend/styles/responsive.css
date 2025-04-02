@@ -1,0 +1,49 @@
+/* Mobile first design */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Tablet and larger */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* Component specific responsive styles */
+@media (max-width: 639px) {
+    .wallet-button {
+        width: 100%;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Responsive typography */
+@media (max-width: 639px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Form responsiveness */
+@media (max-width: 639px) {
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on mobile */
+    }
+}

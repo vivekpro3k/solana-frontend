@@ -1,0 +1,89 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f9fafb; /* Light mode background */
+    color: #111827; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+.dark body {
+    background-color: #111827 !important; /* Dark Blue-Gray */
+    color: #ffffff !important;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+/* Dark Mode: Loading Spinner */
+.dark .loading-spinner {
+    border: 3px solid #374151;
+    border-top: 3px solid #60a5fa;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ensure Wallet ID is Always Visible */
+.dark .wallet-id {
+    color: #ffffff !important;
+    font-weight: bold;
+    display: block !important;
+}
+
+/* Ensure All Text is Visible in Dark Mode */
+.dark p, 
+.dark span, 
+.dark div, 
+.dark h1, 
+.dark h2, 
+.dark h3, 
+.dark h4, 
+.dark h5, 
+.dark h6 {
+    color: #ffffff !important;
+}
+
+/* Adjust Forms & Inputs in Dark Mode */
+.dark input,
+.dark select,
+.dark textarea {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #4b5563 !important;
+}
+
+/* Ensure Buttons are Visible */
+.dark button {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.dark button:hover {
+    background-color: #1e40af !important;
+}

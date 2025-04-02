@@ -1,0 +1,103 @@
+/* Wallet Button */
+.wallet-button {
+    transition: all 0.3s ease;
+}
+
+.wallet-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode: Wallet Button */
+.dark .wallet-button {
+    background-color: #1e293b !important; /* Dark Blue */
+    border-color: #4b5563 !important;
+    color: #ffffff !important;
+}
+
+/* Notification Slide-in Effect */
+.notification {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Transaction Item Hover Effect */
+.transaction-item {
+    transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+    background-color: #f1f5f9;
+}
+
+/* Dark Mode: Transaction Item Hover */
+.dark .transaction-item:hover {
+    background-color: #374151 !important;
+}
+
+/* Wallet Select Modal Fade-in */
+.wallet-select-modal {
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Wallet Option Hover Effect */
+.wallet-option {
+    transition: all 0.2s ease;
+}
+
+.wallet-option:hover {
+    transform: translateY(-1px);
+}
+
+/* Dark Mode: Wallet Option */
+.dark .wallet-option {
+    background-color: #1e293b !important;
+    border-color: #4b5563 !important;
+    color: #ffffff !important;
+}
+
+/* Fix Wallet ID Visibility */
+.dark .wallet-id {
+    color: #ffffff !important;
+    font-weight: bold;
+    display: block !important;
+}
+
+/* Fix Hidden Wallet Section */
+.dark .wallet-container {
+    display: flex !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+}
+
+/* Fix Token Name and Symbol in Dark Mode */
+.dark .token-name,
+.dark .token-symbol {
+    color: #ffffff !important;
+}
+
+/* Ensure All Text is Visible in Dark Mode */
+.dark p, 
+.dark span, 
+.dark div {
+    color: #ffffff !important;
+}
